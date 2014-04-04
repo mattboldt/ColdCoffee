@@ -1,5 +1,14 @@
 $ ->
 
+  #
+  # Global anchor default override
+  #
+  $("a[href=#]").click (e) ->
+    e.preventDefault()
+
+  #
+  # Flash messages
+  #
   $(".flash .close").click ->
     $el = $(this).parent(".flash")
     $el.addClass('flash--hide')

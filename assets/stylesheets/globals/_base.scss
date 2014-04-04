@@ -7,9 +7,13 @@
  */
 
 // Centering wrapper width
-$wrap-width: 1000px;
+$wrap-width: 1000px !default;
+// Base bottom margin
+$margin-bottom: 24px !default;
 // Global line height
-$line-height: 1.5rem;
+$line-height: 1.5rem !default;
+// Rounded corners
+$border-radius: .25rem !default;
 // Set Grid Padding (as px)
 $grid-padding: .25rem .75rem !default;
 // Desktop Media Query
@@ -40,7 +44,7 @@ p,
 table,
 pre,
 hr{
-    margin-bottom:24px;
+    margin-bottom:$margin-bottom;
     margin-bottom:1.5rem;
 }
 
@@ -49,6 +53,7 @@ hr{
  */
 
 p{
+  margin-bottom: $margin-bottom;
   line-height: $line-height;
 }
 

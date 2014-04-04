@@ -348,6 +348,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, fieldset, p, table, pre, hr {
  * Typography
  */
 p {
+  margin-bottom: 24px;
   line-height: 1.5rem; }
 
 ol, ul {
@@ -518,7 +519,7 @@ table {
   position: relative;
   margin: 1rem auto;
   padding: 1rem;
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -559,10 +560,10 @@ table {
 .flash--hide {
   opacity: 0;
   margin: -1.5rem auto;
-  -webkit-transform: scale(0.75);
-  -moz-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75); }
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  transform: scale(0.99); }
 
 .flash-status {
   background-color: #f8f8f8; }
@@ -578,6 +579,24 @@ table {
 
 .flash-error {
   background-color: #efd0d0; }
+
+.button {
+  display: inline-block;
+  margin: 0.25rem 0;
+  padding: 0.5rem 1rem;
+  color: #333;
+  line-height: 1.5rem;
+  border: #EEE 0.1rem solid;
+  border-radius: 0.25rem;
+  background-color: #f8f8f8;
+  -webkit-appearance: none;
+  outline: none; }
+  .button:hover {
+    background-color: #fff;
+    border-color: #CCC; }
+  .button:active {
+    background-color: #f0f0f0; }
+
 
 /*  Plugins
  *

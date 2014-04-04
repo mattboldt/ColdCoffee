@@ -1,0 +1,23 @@
+.button{
+  display: inline-block;
+  margin:.25rem 0;
+  padding:.5rem 1rem;
+  color:#333;
+  line-height: $line-height;
+  border:#EEE .1rem solid;
+  border-radius: $border-radius;
+  background-color:#f8f8f8;
+  -webkit-appearance:none;
+  outline:none;
+  &:hover{
+    background-color: #fff;
+    border-color:#CCC;
+  }
+  &:active{
+    background-color:#f0f0f0;
+  }
+}
+
+  .button-primary{
+
+  }

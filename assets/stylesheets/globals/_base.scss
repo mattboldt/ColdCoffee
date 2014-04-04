@@ -1,0 +1,161 @@
+
+//  Import any webfont(s)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+/*
+ * Global defaults
+ */
+
+// Centering wrapper width
+$wrap-width: 1000px;
+// Global line height
+$line-height: 1.5rem;
+// Set Grid Padding (as px)
+$grid-padding: .25rem .75rem !default;
+// Desktop Media Query
+$desktop: "(min-width: 1024px)" !default;
+// Tablet Media Query
+$tablet: "(min-width: 768px) and (max-width: 1023px)" !default;
+// Mobile Media Query
+$mobile: "(max-width: 767px)" !default;
+
+* {
+  @include box-sizing(border-box);
+}
+
+html{
+  font-size:16px;
+  line-height: $line-height;
+}
+
+body{
+  font-family: "Open Sans", sans-serif;
+}
+
+// Virtical rhythm
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,
+fieldset,
+p,
+table,
+pre,
+hr{
+    margin-bottom:24px;
+    margin-bottom:1.5rem;
+}
+
+/*
+ * Typography
+ */
+
+p{
+  line-height: $line-height;
+}
+
+// Remove built in list styling
+ol, ul {
+  list-style: none;
+}
+
+// Remove link underlining
+a {
+  text-decoration: none;
+}
+
+// Normalize block quotes
+blockquote, q {
+  quotes: none;
+}
+
+// Remove pseudo elements
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* These handle massive type, for less frequently occuring bits of text (e.g. in mastheads and banners). */
+.giga{
+    font-size:80px;
+    font-size:5rem;     /* 80px */
+    line-height:1.2;    /* 96px */
+}
+.mega{
+    font-size:64px;
+    font-size:4rem;     /* 64px */
+    line-height:1.125;  /* 72px */
+}
+.kilo{
+    font-size:48px;
+    font-size:3rem;     /* 48px */
+    line-height:1;      /* 48px */
+}
+
+/* Define headings and their associated classes here. */
+h1, .h1{
+    font-size:32px;
+    font-size:2rem;     /* 32px */
+    line-height:1.5;    /* 48px */
+}
+h2, .h2{
+    font-size:1.5em;    /* 24px */
+    line-height:1;      /* 24px */
+}
+h3, .h3{
+    font-size:20px;
+    font-size:1.25rem;  /* 20px */
+    line-height:1.2;    /* 24px */
+}
+h4, .h4{
+    font-size:18px;
+    font-size:1.125rem; /* 18px */
+    line-height:1.333;  /* 24px */
+}
+h5, .h5{
+    font-size:16px;
+    font-size:1rem;     /* 16px */
+    line-height:1.5;    /* 24px */
+}
+h6, .h6{
+    font-size:16px;
+    font-size:1rem;     /* 16px */
+    line-height:1.5;    /* 24px */
+}
+
+// Smaller than body copy
+small, .small {
+    font-size:12px;
+    font-size:0.75rem;  /* 12px */
+    line-height:2;      /* 24px */
+}
+
+/*
+ * Body defaults
+ */
+
+
+// Normalize tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Centered wrapper width
+.wrap{
+  margin:auto;
+  max-width:$wrap-width;
+}
+
+// Silent class for clear
+%clear:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+// Silent class for hide-text
+%hide-text {
+  overflow:hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}

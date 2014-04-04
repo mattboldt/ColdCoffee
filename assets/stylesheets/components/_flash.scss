@@ -1,0 +1,54 @@
+
+.flash{
+  position: relative;
+  margin: 1rem auto;
+  padding:1rem;
+  @include border-radius(.25em);
+  @include transition(all .2s ease-in-out);
+  .close{
+    display: block;
+    right:1em;
+    @include absolute-center(true);
+    width: 1.15rem;
+    height: 1.15rem;
+    float: right;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    border: rgba(0,0,0,0.3) .15em solid;
+    border-radius: 100%;
+    &:after{
+      content:"×";
+      line-height: 100%;
+      @include absolute-center();
+    }
+    &:hover{
+      color: rgba(0,0,0,0.8);
+      border-color: rgba(0,0,0,0.8);
+    }
+  }
+  box-shadow:inset rgba(0,0,0,0.2) 0px 0px 0px 1px;
+  &:hover{
+    box-shadow:inset rgba(0,0,0,0.3) 0px 0px 0px 1px, rgba(0,0,0,0.1) 0px 1px 2px;
+  }
+}
+  .flash--hide{
+    opacity:0;
+    margin:-1.5rem auto;
+    @include transform(scale(.75));
+  }
+
+.flash-status{
+  background-color:#f8f8f8;
+}
+.flash-message{
+  background-color:#d0e3ef;
+}
+.flash-success{
+  background-color:rgb(170, 215, 154);
+}
+.flash-alert{
+  background-color:#f5dac0;
+}
+.flash-error{
+  background-color:#efd0d0;
+}

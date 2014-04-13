@@ -22,6 +22,7 @@
 @import "components/grid";
 @import "components/flash";
 @import "components/button";
+@import "components/nav";
 
 /*  Plugins
  *
@@ -36,3 +37,5 @@
  */
 
 // @import "sections/";
+
+@import "globals/media-queries";

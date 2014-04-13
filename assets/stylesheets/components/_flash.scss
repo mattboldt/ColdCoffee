@@ -5,7 +5,7 @@
   padding:1rem;
   @include border-radius($border-radius);
   @include transition(all .2s ease-in-out);
-  .close{
+  .flash--close{
     display: block;
     right:1em;
     @include absolute-center(true);

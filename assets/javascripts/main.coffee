@@ -9,7 +9,7 @@ $ ->
   #
   # Flash messages
   #
-  $(".flash .close").click ->
+  $(".flash .flash--close").click ->
     $el = $(this).parent(".flash")
     $el.addClass('flash--hide')
     setTimeout ->

@@ -11,9 +11,13 @@ module.exports = (grunt) ->
       coffee:
         files: 'assets/javascripts/**/*.coffee'
         tasks: ['coffee:compile']
+        options:
+          livereload: true
       sass:
         files: 'assets/stylesheets/**/*.scss'
         tasks: ['sass:compile']
+        options:
+          livereload: true
 
     coffee:
       compile:
@@ -32,5 +36,4 @@ module.exports = (grunt) ->
         ext: '.css'
 
 
-  # 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
   grunt.registerTask('default', ['watch'])

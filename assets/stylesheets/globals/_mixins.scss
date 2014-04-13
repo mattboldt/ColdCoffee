@@ -6,6 +6,12 @@
   border-radius:$r;
 }
 
+@mixin box-shadow($color, $top, $left, $blur, $inset:""){
+  -webkit-box-shadow:$color $top $left $blur #{$inset};
+  -moz-box-shadow:$color $top $left $blur #{$inset};
+  box-shadow:$color $top $left $blur #{$inset};
+}
+
 @mixin absolute-center($vertical:false){
   position: absolute;
   top: 50%;

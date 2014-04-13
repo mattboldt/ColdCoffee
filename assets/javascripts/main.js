@@ -3,7 +3,7 @@
     $("a[href=#]").click(function(e) {
       return e.preventDefault();
     });
-    return $(".flash .close").click(function() {
+    return $(".flash .flash--close").click(function() {
       var $el;
       $el = $(this).parent(".flash");
       $el.addClass('flash--hide');

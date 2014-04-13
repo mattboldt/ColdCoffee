@@ -338,6 +338,7 @@ html {
   line-height: 1.5rem; }
 
 body {
+  padding: 70px 0 30px;
   font-family: "Open Sans", sans-serif; }
 
 h1, h2, h3, h4, h5, h6, ul, ol, dl, fieldset, p, table, pre, hr {
@@ -439,8 +440,8 @@ small, .small {
  * Body defaults
  */
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  border-collapse: collapse; }
 
 .wrap {
   margin: auto;
@@ -525,7 +526,7 @@ table {
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0px 0px 1px; }
-  .flash .close {
+  .flash .flash--close {
     display: block;
     right: 1em;
     position: absolute;
@@ -541,7 +542,7 @@ table {
     cursor: pointer;
     border: rgba(0, 0, 0, 0.3) 0.15em solid;
     border-radius: 100%; }
-    .flash .close:after {
+    .flash .flash--close:after {
       content: "×";
       line-height: 100%;
       position: absolute;
@@ -551,7 +552,7 @@ table {
       -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-    .flash .close:hover {
+    .flash .flash--close:hover {
       color: rgba(0, 0, 0, 0.8);
       border-color: rgba(0, 0, 0, 0.8); }
   .flash:hover {
@@ -598,6 +599,102 @@ table {
     background-color: #f0f0f0; }
 
 
+.navbar {
+  display: table;
+  margin-bottom: 20px;
+  min-height: 50px;
+  width: 100%;
+  background: #f0f0f0; }
+
+.navbar-header {
+  display: table-cell;
+  vertical-align: middle; }
+  .navbar-header a {
+    display: block;
+    padding: 0.5em;
+    height: 100%; }
+
+.navbar-toggle {
+  display: none;
+  float: right; }
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1020; }
+
+.nav {
+  display: table-cell;
+  vertical-align: middle; }
+  .nav > li {
+    position: relative;
+    display: table-cell;
+    vertical-align: inherit; }
+  .nav li > a {
+    display: block;
+    padding: 1em;
+    font-size: 0.9em; }
+    .nav li > a:hover {
+      background: #CCC; }
+
+.dropdown {
+  position: relative; }
+
+.dropdown:hover .dropdown-menu {
+  left: 0; }
+
+.dropdown-menu {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.175) 0 0.25em 0.5em ;
+  -moz-box-shadow: rgba(0, 0, 0, 0.175) 0 0.25em 0.5em ;
+  box-shadow: rgba(0, 0, 0, 0.175) 0 0.25em 0.5em ;
+  position: absolute;
+  top: 100%;
+  left: -999999px;
+  z-index: 1000;
+  display: block;
+  margin: 0;
+  padding: 0.25em 0;
+  min-width: 160px;
+  background: #fff; }
+  .dropdown-menu > li {
+    display: list-item; }
+  .dropdown-menu li > a {
+    display: block;
+    padding: 0.15em 1.5em;
+    white-space: nowrap; }
+    .dropdown-menu li > a:hover {
+      background: #CCC; }
+
+.dropdown-inline .dropdown-menu {
+  position: static;
+  display: inline-block;
+  left: 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.dropdown-header {
+  padding: 0.25em 1.75em;
+  color: #999;
+  font-size: 0.8em; }
+
+@media screen and (max-width: 400px) {
+  .navbar-header {
+    display: block; }
+  .nav {
+    display: none; }
+  .navbar-toggle {
+    display: block; } }
+
 /*  Plugins
  *
  *  Fancy, or maybe bloated plugins
@@ -606,3 +703,6 @@ table {
  *
  *  Styles specific to sections or areas of a site
  */
+@media (max-width: 767px) {
+  .wrap {
+    padding: 0 3%; } }

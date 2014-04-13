@@ -1,0 +1,119 @@
+
+// Wrapping navbar
+.navbar{
+  display: table;
+  margin-bottom:20px;
+  min-height: 50px;
+  width:100%;
+  background:#f0f0f0;
+}
+
+.navbar-header{
+  display: table-cell;
+  vertical-align: middle;
+  a{
+    display: block;
+    padding:.5em;
+    height:100%;
+  }
+}
+  .navbar-toggle{
+    display: none;
+    float:right;
+  }
+
+.navbar-fixed-top{
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1020;
+}
+
+
+// Nav UL
+.nav{
+  display: table-cell;
+  vertical-align: middle;
+  > li{
+    position: relative;
+    display: table-cell;
+    vertical-align: inherit;
+  }
+  li > a{
+    display: block;
+    padding: 1em;
+    font-size:.9em;
+    &:hover{
+      background: #CCC;
+    }
+  }
+}
+
+.dropdown{
+  position: relative;
+}
+.dropdown:hover .dropdown-menu{
+  left:0;
+}
+
+.dropdown-menu{
+  @include box-shadow(rgba(0,0,0,0.175), 0, .25em, .5em);
+  position: absolute;
+  top:100%;
+  left:-999999px;
+  z-index:1000;
+  display: block;
+  margin:0;
+  padding:.25em 0;
+  min-width:160px;
+  background:#fff;
+  > li{
+    display: list-item;
+  }
+  li > a{
+    display: block;
+    padding:.15em 1.5em;
+    white-space: nowrap;
+    &:hover{
+      background: #CCC;
+    }
+  }
+}
+
+.dropdown-inline{
+  .dropdown-menu{
+    position: static;
+    display: inline-block;
+    left: 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.dropdown-header{
+  padding:.25em 1.75em;
+  color:#999;
+  font-size: .8em;
+}
+
+@media screen and (max-width:400px){
+  .navbar-header{
+    display: block;
+  }
+  .nav{
+    display: none;
+  }
+  .navbar-toggle{
+    display: block;
+  }
+}

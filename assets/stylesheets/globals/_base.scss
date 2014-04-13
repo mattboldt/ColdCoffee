@@ -33,6 +33,7 @@ html{
 }
 
 body{
+  padding:70px 0 30px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -141,8 +142,8 @@ small, .small {
 
 // Normalize tables
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 // Centered wrapper width
@@ -151,11 +152,12 @@ table {
   max-width:$wrap-width;
 }
 
+
 // Silent class for clear
 %clear:after {
-  content:"";
   display:table;
   clear:both;
+  content:"";
 }
 
 // Silent class for hide-text

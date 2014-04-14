@@ -51,8 +51,10 @@
  * Padded columns
  */
 
-.grid-padded .col {
-  padding: $grid-padding;
+.grid-padded{
+  .col {
+    padding: $grid-padding;
+  }
 }
 
 

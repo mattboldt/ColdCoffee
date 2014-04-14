@@ -1,23 +1,12 @@
 module.exports = (grunt) ->
 
   grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-sass')
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
-
-    watch:
-      coffee:
-        files: 'assets/javascripts/**/*.coffee'
-        tasks: ['coffee:compile']
-        options:
-          livereload: true
-      sass:
-        files: 'assets/stylesheets/**/*.scss'
-        tasks: ['sass:compile']
-        options:
-          livereload: true
 
     coffee:
       compile:
@@ -34,6 +23,24 @@ module.exports = (grunt) ->
         src: ['assets/stylesheets/main.scss'],
         dest: 'assets/stylesheets/',
         ext: '.css'
+
+    # concat:
+    #   options:
+    #     # define a string to put between each file in the concatenated output
+    #     separator: ';'
+    #   dist:
+    #     src: ['assets/javascripts/**/*.js']
+    #     dest: 'assets/javascripts/main.js'
+
+    watch:
+      coffee:
+        files: 'assets/javascripts/**/*.coffee'
+        tasks: ['coffee:compile']
+      sass:
+        files: 'assets/stylesheets/**/*.scss'
+        tasks: ['sass:compile']
+        options:
+          livereload: true
 
 
   grunt.registerTask('default', ['watch'])

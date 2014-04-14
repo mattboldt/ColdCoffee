@@ -6,6 +6,13 @@
   border-radius:$r;
 }
 
+@mixin border-radius-single($top, $bottom){
+  border-top-left-radius: $top;
+  border-top-right-radius: $top;
+  border-bottom-left-radius: $bottom;
+  border-bottom-right-radius: $bottom;
+}
+
 @mixin box-shadow($color, $top, $left, $blur, $inset:""){
   -webkit-box-shadow:$color $top $left $blur #{$inset};
   -moz-box-shadow:$color $top $left $blur #{$inset};

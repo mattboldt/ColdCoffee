@@ -23,6 +23,8 @@
 @import "components/flash";
 @import "components/button";
 @import "components/nav";
+@import "components/list";
+@import "components/progress-bar";
 
 /*  Plugins
  *
@@ -36,6 +38,6 @@
  *  Styles specific to sections or areas of a site
  */
 
-// @import "sections/";
+@import "sections/jumbotron";
 
 @import "globals/media-queries";
